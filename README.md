@@ -1,5 +1,5 @@
 # ROS2_learning_journey
-The 367Mth starting material about ROS2. This time by someone who doesn't know ROS2 at all. What could go wrong?
+Notes about a beginners ROS2 guide.
 ## Before getting started
 This is not intended to be a full fledged ROS2 guide. I'm nowhere enough good to write one.
 It is just of a collection of the notes I'm taking while getting into the magical world if ROS2, alongside the articles/tutorials I'm reading.
@@ -46,5 +46,43 @@ source /opt/ros/humble/setup.bash
 # Save and exit (Ctrl+X, then Y, then Enter) # Reload the .bashrc
 source ~/.bashrc
 ```
-## Getting started
-A first trivial example can be found at Point 5 of [Part 3](https://medium.com/spinor/getting-started-with-ros2-install-and-setup-ros2-humble-on-ubuntu-22-04-lts-ad718d4a3ac2) of the series.
+## Guide chapters
+### Part 3
+[Link](https://medium.com/spinor/getting-started-with-ros2-install-and-setup-ros2-humble-on-ubuntu-22-04-lts-ad718d4a3ac2). A first trivial example can be found at Point 5.
+### Part 5
+[Link](https://medium.com/spinor/getting-started-with-ros2-create-and-set-up-a-workspace-f60a6c52328c). Introduction to workspaces.
+#### Structure
+- `src`
+- `install`
+- `build`
+- `log`
+#### Setting up colcon
+The command:
+```bash
+colcon --version
+```
+Instead use:
+```bash
+colcon version-check
+```
+#### Creating a workspace
+Create a directory containing the `src` folder.
+Run:
+```bash
+colcon build
+```
+Now source the `<your_workspace_dir>/install/setup.bash` file:
+```bash
+source ~/ros2_ws/install/setup.bash
+```
+This can be automated by adding:
+```bash
+echo "source <your_workspace_dir>/install/setup.bash" >> ~/.bashrc
+# e.g. echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
+```
+to your `.bashrc` file. Then run:
+```bash
+source ~./bashrc
+```
+to refresh the shell configuration.
+### Part 6
