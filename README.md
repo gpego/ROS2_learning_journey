@@ -86,3 +86,10 @@ source ~./bashrc
 ```
 to refresh the shell configuration.
 ### Part 6
+[Link](https://medium.com/spinor/getting-started-with-ros2-understanding-nodes-075e9cde2863). Introduction to nodes.
+Talker/listener example.
+`rqt_graph`
+#### Turtlesim
+Slightly more "advanced" example with Turtlesim package.
+### Part 7
+[Link](https://medium.com/spinor/getting-started-with-ros2-how-to-create-custom-packages-and-nodes-with-python-6b152c7b4e76). Custom packages and nodes in Python.
